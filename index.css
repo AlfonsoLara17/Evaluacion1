@@ -10,6 +10,50 @@
     --Green: hsl(120, 89%, 12%);
     }
     
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--Green); 
+    padding: 15px 30px;
+    position: sticky;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.logonav {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--Yellow_500);
+    align-items: center;
+    justify-content: center;
+}
+
+.logonav img{
+    width: 30px;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ffea00;
+}
 
 body{
     background-color: white;
@@ -35,6 +79,7 @@ body{
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
 }
 .intro h1{
     color:var(--Yellow_500);
@@ -57,6 +102,7 @@ body{
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 .imagenSat img{
@@ -75,8 +121,9 @@ body{
     border-radius: 10px;
     padding-left: 20px;
     padding-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 .descripcionSat span{
@@ -93,6 +140,57 @@ body{
     border-radius: 50%;
 }
 
+.historias {
+    background-color: var(--Green);
+    padding: 50px 20px;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+  }
+.contenedor-historias {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .contenedor-historias h2 {
+    color: var(--Yellow_500);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .introdesc {
+    background-color: var(--Yellow_500);
+    font-size: 1.2em;
+    color: var(--Green);
+    margin-bottom: 40px;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .testimonio {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  
+  .cita {
+    font-style: italic;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  
+  .autor {
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: right;
+  }
+
 .imagenSat2{
     background-color: var(--Green);
     display: flex;
@@ -103,9 +201,17 @@ body{
     padding-left: 20px;
     padding: 20px;
     margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease-in-out;
+    
 }
+.imagenSat2 img:hover {
+    transform: scale(1.10); 
+}
+
 .imagenSat2 img{
     width: 90%;
+    border-radius: 10px;
 
 }
 
@@ -151,6 +257,7 @@ body{
     padding-top: 20px;
     margin-bottom: 30px;
     overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 .lobato span{
@@ -183,6 +290,7 @@ body{
     padding-top: 20px;
     margin-bottom: 30px;
     overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
 }
 .guia h2{
     color:#e3c801;
@@ -213,6 +321,7 @@ body{
     padding-top: 20px;
     margin-bottom: 30px;
     overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 .scout span{
@@ -243,6 +352,7 @@ body{
     padding-top: 20px;
     margin-bottom: 30px;
     overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
 }
 .avanzada h2{
     color:white;
@@ -273,6 +383,7 @@ body{
     padding-top: 20px;
     margin-bottom: 30px;
     overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
 }
 .clan h2{
     color:white;
@@ -302,6 +413,7 @@ body{
     padding-top: 5px;
     padding-left: 20px;
     overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 .instagram{
@@ -351,8 +463,10 @@ body{
         height: 100%;
         object-fit: contain;
     }
+   
     .intro{
         display: flex;
+        flex-direction: column;
         padding-left: 10px;
     }
 
@@ -365,9 +479,10 @@ body{
         color:var(--Yellow_500);
         text-align: center;
     }
-    .intro img{
-        height: 50%;
-        border-radius: 50%;
+    .intro img {
+        width: 100px;
+        height: 100px;
+
     }
 
     .descripcion-imagen-container{
@@ -391,11 +506,33 @@ body{
     }
 
     .descripcionSat img{
-        height: 50%;
+        width: 100px;
+        height: 100px;
     
     }
+    .imagenSat2{
+        background-color: var(--Green);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        padding-left: 20px;
+        padding: 20px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+        transition: transform 0.3s ease-in-out;
+        
+    }
+    
+
+    .imagenSat2 img:hover {
+        transform: scale(1.10); 
+    }
+    
     .imagenSat2 img{
-        width: 100%;
+        width: 90%;
+        border-radius: 10px;
     
     }
 
